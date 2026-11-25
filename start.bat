@@ -1,0 +1,6 @@
+@echo off
+title VIT-O-PIA v2.0 Launcher
+echo Starting VIT-O-PIA v2.0 Backend on http://127.0.0.1:8001 ...
+start "VITOPIA Backend" cmd /k "cd /d "%~dp0backend" && python -m uvicorn main:app --host 127.0.0.1 --port 8001 --reload"
+echo Starting VIT-O-PIA v2.0 Frontend on http://localhost:5174 ...
+start "VITOPIA Frontend" cmd /k "cd /d "%~dp0frontend" && npm.cmd run dev -- --port 5174"
